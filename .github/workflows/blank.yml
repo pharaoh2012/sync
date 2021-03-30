@@ -34,6 +34,8 @@ jobs:
         run: |
           cd gitsource
           ls
+          git remote add togit ${{ github.event.inputs.to }}
+          git push -u -f togit
           echo Add other actions to build, ${{ github.event.inputs.from }}!
           echo test, and deploy your project. ${{ github.event.inputs.to }}!
           
